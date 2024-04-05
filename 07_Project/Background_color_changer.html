@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change_background_color</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .button{
+        border: 2px solid black;
+        margin: 10px;
+        padding: 20px;
+        width: 100px;
+        height: 100px;
+    }
+    #grey{
+        background-color: gray;
+    }
+    #blue{
+        background-color: blue;
+    }
+    #orange{
+        background-color: orange;
+    }
+    #yellow{
+        background-color: yellow;
+    }
+</style>
+<body>
+    <h1>Background Color Change By Click</h1>
+    <div class="buttons">
+        <div class="button" id="grey"></div>
+        <div class="button" id="blue"></div>
+        <div class="button" id="orange"></div>
+        <div class="button" id="yellow"></div>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll('.button');
+        const body = document.querySelector('body');
+
+        buttons.forEach(function (button) {
+            // console.log(button);
+            button.addEventListener('click', function (e) {
+                // console.log(e);
+                // console.log(e.target);
+                if (e.target.id === 'grey') {
+                    body.style.backgroundColor = e.target.id
+                }
+                if (e.target.id === 'blue') {
+                    body.style.backgroundColor = e.target.id
+                }
+                if (e.target.id === 'orange') {
+                    body.style.backgroundColor = e.target.id
+                }
+                if (e.target.id === 'yellow') {
+                    body.style.backgroundColor = e.target.id
+                }
+            });
+        });
+    </script>
+</body>
+</html>
